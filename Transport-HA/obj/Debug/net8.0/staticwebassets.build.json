@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "q6Stk/+OsTJJTIIbLhNsFf4aXobP4TlEqzZ4LwkzWyc=",
+  "Source": "Transport-HA",
+  "BasePath": "_content/Transport-HA",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
