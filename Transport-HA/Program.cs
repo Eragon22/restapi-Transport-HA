@@ -1,33 +1,44 @@
-using Transport_HA.DAL;
-using Transport_HA.Services;
-using Microsoft.EntityFrameworkCore.InMemory;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
+using Transport_HA.DAL;
+using Transport_HA.DAL.Entities;
+using Transport_HA.DTOs;
+using Transport_HA.Services;
 
-namespace Transport_HA
+public class Program
 {
-    public class Program
+    public static void Main(string[] args)
     {
-        public static void Main(string[] args)
-        {
-            var builder = WebApplication.CreateBuilder(args);
+        var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddControllers();
+        builder.Services.AddScoped<IVehicleService, VehicleService>();
 
-            builder.Services.AddScoped<IVehicleService, VehicleService>();
-            builder.Services.AddDbContext<VehicleDbContext>(options =>
+        builder.Services.AddDbContext<VehicleDbContext>(options =>
             options.UseInMemoryDatabase("VehicleDb"));
-            builder.Services
+
+        builder.Services
             .AddControllers()
             .AddJsonOptions(options =>
             {
                 options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
             });
-            var app = builder.Build();
 
-            app.MapControllers();
+        var app = builder.Build();
 
-            app.Run();
+        using (var scope = app.Services.CreateScope())
+        {
+            var dbContext = scope.ServiceProvider.GetRequiredService<VehicleDbContext>();
+
+            dbContext.Vehicles.AddRange(
+                new DBVehicle { Id = 1, PassangerCapacity = 5, Range = 400.0, FuelType = FuelType.Gasoline },
+                new DBVehicle { Id = 2, PassangerCapacity = 4, Range = 300.0, FuelType = FuelType.Hybrid },
+                new DBVehicle { Id = 3, PassangerCapacity = 2, Range = 250.0, FuelType = FuelType.Electric }
+            );
+            dbContext.SaveChanges();
         }
+
+        app.MapControllers();
+
+        app.Run();
     }
 }

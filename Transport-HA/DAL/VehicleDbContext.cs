@@ -13,12 +13,20 @@ namespace Transport_HA.DAL
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<DBVehicle>()
-                .HasKey(v => v.Id);
+            modelBuilder.Entity<DBVehicle>(entity =>
+            {
+                entity.Property(v => v.Id)
+                    .ValueGeneratedOnAdd();
 
-            modelBuilder.Entity<DBVehicle>()
-                .Property(v => v.Id)
-                .ValueGeneratedOnAdd();
+                entity.Property(v => v.PassangerCapacity)
+                    .IsRequired();
+
+                entity.Property(v => v.Range)
+                    .IsRequired();
+
+                entity.Property(v => v.FuelType)
+                    .IsRequired();
+            });
         }
     }
 }

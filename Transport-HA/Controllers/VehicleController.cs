@@ -26,7 +26,14 @@ namespace Transport_HA.Controllers
         public ActionResult<Vehicle> AddVehicle([FromBody] Vehicle vehicle)
         {
             var added = _vehicleService.Add(vehicle);
-            return CreatedAtAction(nameof(AddVehicle), new { id = added.Id }, added);
+            return CreatedAtAction(nameof(AddVehicle), added);
+        }
+
+        [HttpGet("suggestion")]
+        public ActionResult<IEnumerable<Suggestion>> Suggestion([FromBody] Trip trip)
+        {
+            var suggestions = _vehicleService.Suggestion(trip);
+            return Ok(suggestions);
         }
     }
 }

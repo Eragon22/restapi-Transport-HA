@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Eragon\\Documents\\Egyetem\\szakgyak\\otp\\restapi-Transport-HA\\Transport-HA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{43CBC9C5-23A5-43BC-AD26-68EECF0303E8}|Transport-HA.csproj|c:\\users\\eragon\\documents\\egyetem\\szakgyak\\otp\\restapi-transport-ha\\transport-ha\\dal\\entities\\dbvehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43CBC9C5-23A5-43BC-AD26-68EECF0303E8}|Transport-HA.csproj|solutionrelative:dal\\entities\\dbvehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{43CBC9C5-23A5-43BC-AD26-68EECF0303E8}|Transport-HA.csproj|c:\\users\\eragon\\documents\\egyetem\\szakgyak\\otp\\restapi-transport-ha\\transport-ha\\controllers\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43CBC9C5-23A5-43BC-AD26-68EECF0303E8}|Transport-HA.csproj|solutionrelative:controllers\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43CBC9C5-23A5-43BC-AD26-68EECF0303E8}|Transport-HA.csproj|c:\\users\\eragon\\documents\\egyetem\\szakgyak\\otp\\restapi-transport-ha\\transport-ha\\services\\vehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43CBC9C5-23A5-43BC-AD26-68EECF0303E8}|Transport-HA.csproj|solutionrelative:services\\vehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DBVehicle.cs",
-              "DocumentMoniker": "C:\\Users\\Eragon\\Documents\\Egyetem\\szakgyak\\otp\\restapi-Transport-HA\\Transport-HA\\DAL\\Entities\\DBVehicle.cs",
-              "RelativeDocumentMoniker": "DAL\\Entities\\DBVehicle.cs",
-              "ToolTip": "C:\\Users\\Eragon\\Documents\\Egyetem\\szakgyak\\otp\\restapi-Transport-HA\\Transport-HA\\DAL\\Entities\\DBVehicle.cs",
-              "RelativeToolTip": "DAL\\Entities\\DBVehicle.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "VehicleService.cs",
+              "DocumentMoniker": "C:\\Users\\Eragon\\Documents\\Egyetem\\szakgyak\\otp\\restapi-Transport-HA\\Transport-HA\\Services\\VehicleService.cs",
+              "RelativeDocumentMoniker": "Services\\VehicleService.cs",
+              "ToolTip": "C:\\Users\\Eragon\\Documents\\Egyetem\\szakgyak\\otp\\restapi-Transport-HA\\Transport-HA\\Services\\VehicleService.cs",
+              "RelativeToolTip": "Services\\VehicleService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T11:19:06.263Z",
+              "WhenOpened": "2025-05-25T00:03:19.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VehicleController.cs",
+              "DocumentMoniker": "C:\\Users\\Eragon\\Documents\\Egyetem\\szakgyak\\otp\\restapi-Transport-HA\\Transport-HA\\Controllers\\VehicleController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VehicleController.cs",
+              "ToolTip": "C:\\Users\\Eragon\\Documents\\Egyetem\\szakgyak\\otp\\restapi-Transport-HA\\Transport-HA\\Controllers\\VehicleController.cs",
+              "RelativeToolTip": "Controllers\\VehicleController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAUwBIAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T00:00:23.386Z",
               "EditorCaption": ""
             }
           ]

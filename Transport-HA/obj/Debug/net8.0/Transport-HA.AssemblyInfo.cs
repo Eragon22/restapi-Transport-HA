@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Transport-HA")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea217ff640bec1db3693ce590bee694216d96c4b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f4dbf9055ec3b60c6108d20bc9ec5eba98af5d4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Transport-HA")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Transport-HA")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -7,5 +7,5 @@
         Electric
     }
 
-    public record Vehicle(int Id, int PassangerCapacity, double Range, FuelType FuelType);
+    public record Vehicle(int PassangerCapacity, double Range, FuelType FuelType);
 }
