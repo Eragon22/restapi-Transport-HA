@@ -52,9 +52,9 @@ The solution is organized according to best practices for maintainability, clari
 
 ### Key Points:
 - **Controllers:** Handle HTTP requests and route them to the appropriate services.
-- **DTOs:** Define data contracts for API communication, ensuring clear and consistent data exchange.
-- **Services:** Encapsulate business logic and data access, promoting separation of concerns and testability.
-- **DAL (Data Access Layer):** Manages database entities and context, abstracting persistence details from business logic.
+- **DTOs:** Define data contracts for API communication.
+- **Services:** Encapsulate business logic and data access.
+- **DAL (Data Access Layer):** Manages database entities and contextc.
 - **Program.cs:** Configures application startup, dependency injection, and initial data seeding.
 
 ## Business Logic
