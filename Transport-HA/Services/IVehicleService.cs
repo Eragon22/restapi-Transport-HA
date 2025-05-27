@@ -6,8 +6,8 @@ namespace Transport_HA.Services
     {
         IReadOnlyCollection<Vehicle> List();
 
-        Vehicle Add(Vehicle vehicle);
+        Vehicle? Get(int id);
 
-        IReadOnlyCollection<Suggestion> Suggestion(Trip trip);
+        Vehicle Add(VehicleAdd vehicle);
     }
 }

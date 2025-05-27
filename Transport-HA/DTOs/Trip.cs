@@ -1,4 +1,4 @@
 ﻿namespace Transport_HA.DTOs
 {
-    public record Trip(int PassangerCount, double Distance);
+    public record Trip(int PassengerCount, double Distance);
 }

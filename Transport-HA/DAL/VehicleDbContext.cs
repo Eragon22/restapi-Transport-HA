@@ -18,7 +18,12 @@ namespace Transport_HA.DAL
                 entity.Property(v => v.Id)
                     .ValueGeneratedOnAdd();
 
-                entity.Property(v => v.PassangerCapacity)
+                entity.HasKey(v => v.Id);
+
+                entity.Property(v => v.Id)
+                    .IsRequired();
+
+                entity.Property(v => v.PassengerCapacity)
                     .IsRequired();
 
                 entity.Property(v => v.Range)

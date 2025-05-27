@@ -5,7 +5,7 @@ using Transport_HA.Services;
 namespace Transport_HA.Controllers
 {
     [ApiController]
-    [Route("api/[Controller]")]
+    [Route("api/[controller]")]
     public class VehicleController : ControllerBase
     {
         private readonly IVehicleService _vehicleService;
@@ -21,19 +21,27 @@ namespace Transport_HA.Controllers
             var vehicles = _vehicleService.List();
             return Ok(vehicles);
         }
-
-        [HttpPost]
-        public ActionResult<Vehicle> AddVehicle([FromBody] Vehicle vehicle)
+        [HttpGet]
+        [Route("{id}")]
+        public ActionResult<Vehicle> GetVehicle(int id)
         {
-            var added = _vehicleService.Add(vehicle);
-            return CreatedAtAction(nameof(AddVehicle), added);
+            var vehicle = _vehicleService.Get(id);
+            if (vehicle == null)
+            {
+                return NotFound($"Vehicle with ID {id} not found.");
+            }
+            return Ok(vehicle);
         }
 
-        [HttpGet("suggestion")]
-        public ActionResult<IEnumerable<Suggestion>> Suggestion([FromBody] Trip trip)
+        [HttpPost]
+        public ActionResult<Vehicle> AddVehicle([FromBody] VehicleAdd vehicle)
         {
-            var suggestions = _vehicleService.Suggestion(trip);
-            return Ok(suggestions);
+            if (vehicle == null)
+            {
+                return BadRequest("Vehicle data is required.");
+            }
+            var addedVehicle = _vehicleService.Add(vehicle);
+            return CreatedAtAction(nameof(GetVehicle), new { id = addedVehicle.Id }, addedVehicle);
         }
     }
 }

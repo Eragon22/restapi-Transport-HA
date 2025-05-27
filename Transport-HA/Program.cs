@@ -12,6 +12,7 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Services.AddScoped<IVehicleService, VehicleService>();
+        builder.Services.AddScoped<ISuggestionService, SuggestionService>();
 
         builder.Services.AddDbContext<VehicleDbContext>(options =>
             options.UseInMemoryDatabase("VehicleDb"));
@@ -29,10 +30,11 @@ public class Program
         {
             var dbContext = scope.ServiceProvider.GetRequiredService<VehicleDbContext>();
 
+            // Seed the database with initial data for testing
             dbContext.Vehicles.AddRange(
-                new DBVehicle { Id = 1, PassangerCapacity = 5, Range = 400.0, FuelType = FuelType.Gasoline },
-                new DBVehicle { Id = 2, PassangerCapacity = 4, Range = 300.0, FuelType = FuelType.Hybrid },
-                new DBVehicle { Id = 3, PassangerCapacity = 2, Range = 250.0, FuelType = FuelType.Electric }
+                new DBVehicle { Id = 1, PassengerCapacity = 5, Range = 400.0, FuelType = FuelType.Gasoline },
+                new DBVehicle { Id = 2, PassengerCapacity = 4, Range = 300.0, FuelType = FuelType.Hybrid },
+                new DBVehicle { Id = 3, PassengerCapacity = 2, Range = 250.0, FuelType = FuelType.Electric }
             );
             dbContext.SaveChanges();
         }
