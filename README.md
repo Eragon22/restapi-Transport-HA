@@ -69,16 +69,16 @@ The solution is organized according to best practices for maintainability, clari
 -	Process:
 	-	Filters vehicles that can accommodate the passenger count and complete the trip without refueling.
 - Calculates profit for each vehicle:
--	Travel Fee:
-	-	€2 × distance
-	-	€2 × number of started half-hours
-		-	**Note:** Distance is split into two segments based on the description: 
-			-	**city:** 2 min/km for first 50 km, **highway:** 1 min/km after 50 km
--	Refueling Cost:
-	-	Gasoline: €2 × distance
-	-	Electric: €2 × distance
-	-	Hybrid: €2 × distance (city), €2 × distance (highway)
-		-	**Note:** Hybrid fuel consumption logic was not clearly defined in the original task, so the following interpretation was applied.
+	-	Travel Fee:
+		-	€2 × distance
+		-	€2 × number of started half-hours
+			-	**Note:** Distance is split into two segments based on the description: 
+				-	**city:** 2 min/km for first 50 km, **highway:** 1 min/km after 50 km
+	-	Refueling Cost:
+		-	Gasoline: €2 × distance
+		-	Electric: €2 × distance
+		-	Hybrid: €2 × distance (city), €2 × distance (highway)
+			-	**Note:** Hybrid fuel consumption logic was not clearly defined in the original task, so the following interpretation was applied.
 -	Ranks suggestions by profit (highest first).
 -	Output: List of suggestions with rank, profit, and vehicle details.
 
