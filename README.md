@@ -58,6 +58,8 @@ The solution is organized according to best practices for maintainability, clari
 - **Program.cs:** Configures application startup, dependency injection, and initial data seeding.
 
 ## Business Logic
+**Note:** All distances are assumed to be in kilometers (km).
+
 **Vehicle Addition**
 -	Vehicles are added via the API and stored in the in-memory database.
 -	Each vehicle has a defined capacity, range, and fuel type and a unique identifier handled by the database.
@@ -73,9 +75,9 @@ The solution is organized according to best practices for maintainability, clari
 		-	**Note:** Distance is split into two segments based on the description: 
 			-	**city:** 2 min/km for first 50 km, **highway:** 1 min/km after 50 km
 -	Refueling Cost:
-	-	Gasoline: €2/km
-	-	Electric: €1/km
-	-	Hybrid: €1/km (city), €2/km (highway)
+	-	Gasoline: €2 × distance
+	-	Electric: €2 × distance
+	-	Hybrid: €2 × distance (city), €2 × distance (highway)
 		-	**Note:** Hybrid fuel consumption logic was not clearly defined in the original task, so the following interpretation was applied.
 -	Ranks suggestions by profit (highest first).
 -	Output: List of suggestions with rank, profit, and vehicle details.
