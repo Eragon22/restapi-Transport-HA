@@ -25,7 +25,7 @@ Retrieves the details of a specific vehicle by its unique identifier.
 
 ### Setup & Run
 #### Prerequisites
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) (This project targets **.NET 8** and is fully cross-platform. It runs on Windows, Linux, and macOS—just ensure the .NET 8 SDK/runtime is installed.)
+[.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) (This project targets **.NET 8** and is fully cross-platform. It runs on Windows, Linux, and macOS—just ensure the .NET 8 SDK/runtime is installed.)
 
 
 #### Clone repository
