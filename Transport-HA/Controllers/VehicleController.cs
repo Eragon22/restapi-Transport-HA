@@ -40,6 +40,10 @@ namespace Transport_HA.Controllers
             {
                 return BadRequest("Vehicle data is required.");
             }
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             var addedVehicle = _vehicleService.Add(vehicle);
             return CreatedAtAction(nameof(GetVehicle), new { id = addedVehicle.Id }, addedVehicle);
         }

@@ -21,7 +21,12 @@ namespace Transport_HA.Controllers
             {
                 return BadRequest("Trip data is required.");
             }
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             var suggestions = _suggestionService.GenerateSuggestions(trip);
+
             if (suggestions == null || !suggestions.Any())
             {
                 return Ok(Enumerable.Empty<DTOs.Suggestion>());
